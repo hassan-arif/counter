@@ -1,5 +1,6 @@
 const initialState = {
-    counter: 0
+    counter: 0,
+    history: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -12,7 +13,7 @@ const reducer = (state = initialState, action) => {
         case 'DECREMENT':
             return {
                 ...state,
-                counter: state.counter + 1
+                counter: state.counter - 1
             }
         case 'CHANGE_BY': // works both for +ive or -ive value
             return {
